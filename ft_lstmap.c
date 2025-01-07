@@ -1,0 +1,56 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:54:48 by kbarru            #+#    #+#             */
+/*   Updated: 2024/11/16 18:05:52 by kbarru           ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include <stdlib.h>
+
+t_list	*init_lst(void *temp, void (*del)(void *))
+{
+	t_list	*lst;
+
+	lst = ft_lstnew(temp);
+	if (!lst)
+	{
+		del(temp);
+		return (NULL);
+	}
+	return (lst);
+}
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*head2;
+	t_list	*current2;
+	void	*temp;
+
+	if (!lst)
+		return (NULL);
+	temp = f(lst->content);
+	current2 = init_lst(temp, del);
+	if (!current2)
+		return (NULL);
+	head2 = current2;
+	while (lst->next)
+	{
+		temp = f(lst->next->content);
+		current2->next = ft_lstnew(temp);
+		if (!(current2->next))
+		{
+			del(temp);
+			ft_lstclear(&head2, del);
+			return (NULL);
+		}
+		current2 = current2->next;
+		lst = lst->next;
+	}
+	return (head2);
+}

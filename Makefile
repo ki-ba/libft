@@ -17,7 +17,6 @@ ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lst_functions1.c ft_lst_functions2.c \
-ft_lstsize.c ft_lstmap.c \
 ft_is_in.c ft_put_ul_base.c ft_putchar.c ft_printf.c \
 ft_putnbr_base.c \
 

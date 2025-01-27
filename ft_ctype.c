@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_ctype.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 13:50:46 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/16 16:58:39 by kbarru           ###   ########lyon.fr   */
+/*   Created: 2024/11/05 12:44:02 by kbarru            #+#    #+#             */
+/*   Updated: 2025/01/27 23:17:57 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_isdigit(int c)
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	return (c >= '0' && c <= '9');
+}
+
+int	ft_isascii(int c)
+{
+	return (c >= 0 && c <= 127);
+}
+
+int	ft_isalpha(int c)
+{
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+}
+
+int	ft_isalnum(int c)
+{
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

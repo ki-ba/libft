@@ -1,17 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lst_functions1.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 15:54:48 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/16 18:05:52 by kbarru           ###   ########lyon.fr   */
+/*   Created: 2024/11/16 13:17:30 by kbarru            #+#    #+#             */
+/*   Updated: 2025/01/27 23:24:32 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+
+int	ft_lstsize(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		++i;
+		lst = lst->next;
+	}
+	return (i);
+}
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*head;
+
+	head = malloc(sizeof(t_list));
+	if (!head)
+		return (0);
+	head->content = content;
+	head->next = NULL;
+	return (head);
+}
 
 t_list	*init_lst(void *temp, void (*del)(void *))
 {
@@ -53,4 +77,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		lst = lst->next;
 	}
 	return (head2);
+}
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (0);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

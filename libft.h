@@ -6,13 +6,14 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:06:45 by kbarru            #+#    #+#             */
-/*   Updated: 2025/01/07 23:48:18 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/01/27 23:21:29 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
 
 // PRINTF INCLUDES
 # include <stdarg.h>

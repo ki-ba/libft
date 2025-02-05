@@ -4,7 +4,7 @@ NAME = libft.a
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 P_OBJ = .obj/
-
+P_SRC = src/
 # --- SRC ---
 
 SRC = ft_ctype.c \
@@ -31,8 +31,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-$(P_OBJ)%.o: %.c libft.h | $(P_OBJ)
-	$(CC) $(FLAGS) -c $< -o $@
+$(P_OBJ)%.o: $(P_SRC)%.c libft.h | $(P_OBJ)
+	$(CC) $(FLAGS) -I ./ -c $< -o $@
 
 $(P_OBJ):
 	mkdir $(P_OBJ)

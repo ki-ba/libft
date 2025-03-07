@@ -41,7 +41,6 @@ $(P_OBJ):
 
 
 clean:
-	rm -f $(OBJ) $(OBJBONUS)
 	rm -rf $(P_OBJ)
 
 fclean: clean

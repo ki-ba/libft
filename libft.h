@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:06:45 by kbarru            #+#    #+#             */
-/*   Updated: 2025/01/29 16:04:33 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 17:43:04 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
 
 // PRINTF INCLUDES
 # include <stdarg.h>
@@ -88,4 +96,14 @@ int					ft_is_in(const char c, const char *str);
 int					ft_put_ul_base(unsigned long nbr, char *base, int size);
 int					ft_putchar(char c);
 int					ft_putnbr_base(int nbr, char *base, int size);
+
+/* get_next_line.c */
+char	*join_to_line(char *line[], char buffer[]);
+char	*get_next_line(int fd);
+
+/* get_next_line_utils.c */
+char	*ft_strchr(const char *s, int c);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+char	*ft_strnjoin(char *s1, char *s2, size_t n);
+char	*ft_strncpy(char dst[], const char src[], size_t n);
 #endif

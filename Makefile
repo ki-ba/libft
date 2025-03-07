@@ -2,7 +2,8 @@
 
 NAME = libft.a
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
+DEBUGFLAGS = $(FLAGS) -fsanitize=address
 P_OBJ = .obj/
 P_SRC = src/
 # --- SRC ---
@@ -19,6 +20,7 @@ ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lst_functions1.c ft_lst_functions2.c \
 ft_is_in.c ft_put_ul_base.c ft_putchar.c ft_printf.c \
 ft_putnbr_base.c \
+ft_get_next_line_utils.c ft_get_next_line.c
 
 # --- RULES ---
 

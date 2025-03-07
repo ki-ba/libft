@@ -6,22 +6,12 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:50:49 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 10:52:26 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 18:19:30 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
-
-static size_t	ft_strnlen(const char *str, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n && str[i])
-		++i;
-	return (i);
-}
 
 char	*ft_strnstr(const char big[], const char little[], size_t len)
 {
@@ -48,16 +38,3 @@ char	*ft_strnstr(const char big[], const char little[], size_t len)
 	}
 	return (0);
 }
-
-/* int	main(void)
-{
-	char	*big;
-	char	*little;
-	size_t	n;
-
-	big = "abc";
-	little = "abcdef";
-	n = 2;
-	printf("%s", ft_strnstr(big, little, n));
-	return (0);
-} */

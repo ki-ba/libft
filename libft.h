@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:06:45 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 17:43:04 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 18:55:49 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void				*ft_memset(void *s, int c, size_t n);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
+size_t				ft_strnlen(const char *str, size_t n);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_strchr(const char *s, int c);
@@ -98,12 +99,12 @@ int					ft_putchar(char c);
 int					ft_putnbr_base(int nbr, char *base, int size);
 
 /* get_next_line.c */
-char	*join_to_line(char *line[], char buffer[]);
-char	*get_next_line(int fd);
+char				*join_to_line(char *line[], char buffer[]);
+char				*get_next_line(int fd);
 
 /* get_next_line_utils.c */
-char	*ft_strchr(const char *s, int c);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-char	*ft_strnjoin(char *s1, char *s2, size_t n);
-char	*ft_strncpy(char dst[], const char src[], size_t n);
+char				*ft_strchr(const char *s, int c);
+void				*ft_memmove(void *dest, const void *src, size_t n);
+char				*ft_strnjoin(char *s1, char *s2, size_t n);
+char				*ft_strncpy(char dst[], const char src[], size_t n);
 #endif

@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:25:38 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 08:28:31 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 18:19:46 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (-1);
 	return (0);
 }
-/* #include <string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d %d %d %d\n",
-	ft_strncmp(0, "hello world",10),
-	ft_strncmp("hello", 0,4),
-	ft_strncmp(0, 0,5),
-	ft_strncmp("hello", "hellz",5));
-		printf("%d %d %d %d\n",
-	strncmp(0, "hello world",10),
-	strncmp("hello", 0,4),
-	strncmp(0, 0,5),
-	strncmp("hello", "hellz",5));
-} */

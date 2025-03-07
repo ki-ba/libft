@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:52:42 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 08:21:53 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 18:54:19 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,10 @@ size_t	ft_strlen(const char *s)
 {
 	int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i])
 		++i;
 	return (i);
 }
-
-/* #include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	printf("%zu\n", ft_strlen(0));
-} */

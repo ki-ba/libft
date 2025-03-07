@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:24:17 by kbarru            #+#    #+#             */
-/*   Updated: 2025/01/29 16:04:44 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 18:18:19 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*s2;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	if (!end)

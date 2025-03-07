@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 17:40:05 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 17:58:14 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:39:48 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strnjoin(char *s1, char *s2, size_t n)
 	size_t	s1_len;
 	size_t	s2_len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	if (s2_len > n + 1)
@@ -41,6 +43,8 @@ char	*ft_strncpy(char dst[], const char src[], size_t n)
 {
 	size_t	i;
 
+	if (!dst || !src)
+		return (NULL);
 	i = 0;
 	while (i < n && src[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:54:05 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/07 15:26:00 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:33:54 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	char	*start;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	start = (char *)s;
 	while (i < n)

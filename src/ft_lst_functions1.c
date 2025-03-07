@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:17:30 by kbarru            #+#    #+#             */
-/*   Updated: 2025/01/27 23:24:32 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:41:40 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
+	if (!content)
+		return (NULL);
 	head = malloc(sizeof(t_list));
 	if (!head)
-		return (0);
+		return (NULL);
 	head->content = content;
 	head->next = NULL;
 	return (head);
@@ -41,6 +43,8 @@ t_list	*init_lst(void *temp, void (*del)(void *))
 {
 	t_list	*lst;
 
+	if (!temp || !del)
+		return (NULL);
 	lst = ft_lstnew(temp);
 	if (!lst)
 	{
@@ -56,7 +60,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*current2;
 	void	*temp;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
 	temp = f(lst->content);
 	current2 = init_lst(temp, del);

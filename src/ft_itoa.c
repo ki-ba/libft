@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:30:48 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 10:37:44 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:38:59 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,3 @@ char	*ft_itoa(int n)
 	}
 	return (number);
 }
-
-/* #include "libft.h"
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	while (--argc)
-		printf("%s : %s\n", argv[argc], ft_itoa(ft_atoi(argv[argc])));
-} */

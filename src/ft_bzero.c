@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:25:19 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/08 18:26:35 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:40:09 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (i < n)
 	{

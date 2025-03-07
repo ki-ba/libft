@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:55:41 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/08 18:20:55 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:34:53 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while (i < n)
 	{
@@ -27,20 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/* #include <string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-
-	printf("%d %d %d %d\n",
-	ft_memcmp("hello world", "hello world",10),
-	ft_memcmp("hello", "hell",4),
-	ft_memcmp("hello", "hell",5),
-	ft_memcmp("hello", "hellz",5));
-		printf("%d %d %d %d\n",
-	memcmp("hello", "hell",2),
-	memcmp("hello", "hell",4),
-	memcmp("hello", "hell",5),
-	memcmp("hello", "hellz",5));
-} */

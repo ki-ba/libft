@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:32:20 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/17 21:54:54 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:34:12 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	i;
 
+	if (!dest || !src)
+		return (NULL);
 	if ((src < dest))
 	{
 		i = n - 1;

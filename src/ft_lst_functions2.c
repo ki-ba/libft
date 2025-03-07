@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:11:12 by kbarru            #+#    #+#             */
-/*   Updated: 2025/01/27 23:52:27 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:37:00 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current;
 
+	if (!f)
+		return ;
 	current = lst;
 	while (current)
 	{
@@ -38,6 +40,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*next;
 
+	if (!lst)
+		return (NULL);
 	current = *lst;
 	while (current)
 	{

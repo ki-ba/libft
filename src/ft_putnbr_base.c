@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 23:05:46 by kbarru            #+#    #+#             */
-/*   Updated: 2025/01/29 16:04:53 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:33:14 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_putnbr_base(int nbr, char *base, int size)
 	long	lnbr;
 	int		return_value;
 
+	if (!base)
+		return (0);
 	lnbr = nbr;
 	n = ft_strlen(base);
 	if (nbr < 0)

@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:46:33 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 18:38:11 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:35:12 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
@@ -25,12 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-/* #include <stdio.h>
-int	main(void)
-{
-	char *string = "Lorem ipsum dolor sit amet";
-	char c = 'd';
-	size_t n = 50;
-
-	printf("ft : %p\nC: %p\n", ft_memchr(string,c,n), memchr(string,c,n));
-} */

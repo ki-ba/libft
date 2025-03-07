@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 17:40:05 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 17:45:20 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 17:58:14 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,45 +18,6 @@
 * @param s the string to check for c in.
 * @param c the character to find in the string.
 */
-char	*ft_strchr(const char *s, int c)
-{
-	if (!s)
-		return (NULL);
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		++s;
-	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	int	i;
-
-	if ((src < dest))
-	{
-		i = n - 1;
-		while (i >= 0)
-		{
-			((unsigned char *)(dest))[i] = ((unsigned char *)(src))[i];
-			--i;
-		}
-	}
-	if (dest < src)
-	{
-		i = 0;
-		while (i <= (int)n)
-		{
-			((unsigned char *)(dest))[i] = ((unsigned char *)(src))[i];
-			++i;
-		}
-	}
-	return (dest);
-}
 
 char	*ft_strnjoin(char *s1, char *s2, size_t n)
 {

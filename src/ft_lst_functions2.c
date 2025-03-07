@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:11:12 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 21:37:00 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/07 21:47:43 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*next;
 
 	if (!lst)
-		return (NULL);
+		return ;
 	current = *lst;
 	while (current)
 	{

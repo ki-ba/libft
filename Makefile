@@ -20,7 +20,10 @@ ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lst_functions1.c ft_lst_functions2.c \
 ft_is_in.c ft_put_ul_base.c ft_putchar.c ft_printf.c \
 ft_putnbr_base.c \
-ft_get_next_line_utils.c ft_get_next_line.c ft_strnlen.c
+ft_get_next_line_utils.c ft_get_next_line.c ft_strnlen.c \
+ft_concat.c ft_create_random_str.c ft_heap_add_suffix.c \
+ft_is_non_empty.c ft_multifree.c ft_print_arr.c ft_str_is_alnum.c \
+ft_string_arr_utils.c
 
 # --- RULES ---
 

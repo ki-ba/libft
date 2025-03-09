@@ -6,7 +6,7 @@
 /*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:07 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 13:35:16 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/08 19:55:44 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ void	ft_putnbr_fd(int nb, int fd)
 		}
 	}
 }
-/* int	main(void)
-{
-	// ft_putnbr_fd(2147483647, 1);
-	// ft_putnbr_fd(-2147483648, 1);
-	// ft_putnbr_fd(-0, 1);
-	// ft_putnbr_fd(15, 1);
-} */

@@ -3,17 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:06:45 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 18:55:49 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/09 11:17:07 by kiba             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stddef.h>
 # include <stdlib.h>
+# include "fcntl.h"
+# include <stdarg.h>
+# include <stdio.h>
+# include <unistd.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
@@ -23,10 +28,13 @@
 #  define MAX_FD 1024
 # endif
 
+typedef enum bool
+{
+	FALSE,
+	TRUE
+}	t_bool;
+
 // PRINTF INCLUDES
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
 
 # define HEX_BASE_LOWER "0123456789abcdef"
 # define HEX_BASE_UPPER "0123456789ABCDEF"
@@ -97,6 +105,16 @@ int					ft_is_in(const char c, const char *str);
 int					ft_put_ul_base(unsigned long nbr, char *base, int size);
 int					ft_putchar(char c);
 int					ft_putnbr_base(int nbr, char *base, int size);
+t_bool				str_is_alnum(char str[]);
+t_bool				str_is_non_empty(char str[]);
+void				ft_print_arr(char **arr);
+void				ft_free_arr(char **arr);
+int					get_arr_length(char **arr);
+char				**duplicate_arr(char **arr);
+void				str_arr_suffix(char **arr, char *suffix);
+void				ft_multifree(int n_simple, int n_arr, ...);
+char				*ft_concat(size_t n, ...);
+void				heap_add_suffix(const char *suffix, char **s1);
 
 /* get_next_line.c */
 char				*join_to_line(char *line[], char buffer[]);

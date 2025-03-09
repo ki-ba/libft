@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:32:20 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 21:34:12 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/09 11:14:46 by kiba             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -35,23 +34,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*  #include <stdio.h>
-
-int	main(void)
-{
-	char	*src = "lorem ipum dolor sit a";
-	char	*dest = "                          ";
-	int	i;
-
-	i = 0;
-	if (src - dest > 0)
-		printf("src is RIGHT of dest\n");
-	else
-		printf("src is LEFT of dest\n");
-	ft_memmove(dest, src, 1);
-	printf("&src = %p\n&dest = %p\n", src, dest);
-
-		printf("%s,", dest);
-
-} */

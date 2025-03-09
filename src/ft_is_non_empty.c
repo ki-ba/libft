@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_is_non_empty.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
+/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 13:25:19 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/09 11:14:05 by kiba             ###   ########lyon.fr   */
+/*   Created: 2025/03/09 10:43:58 by kbarru            #+#    #+#             */
+/*   Updated: 2025/03/09 10:51:38 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+/*
+ *	@brief returns whether `str` is non-null AND non-empty or not.
+ *	@param str the string to check.
+ *	@returns 1 if `str` is a valid string of length > 0.
+ *	@returns 0 otherwise.
+*/
+t_bool	ft_is_non_empty(char str[])
 {
-	size_t	i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = 0;
-		++i;
-	}
+	return (str && str[0]);
 }

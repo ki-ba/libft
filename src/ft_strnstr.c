@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:50:49 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/07 21:41:04 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/09 11:16:12 by kiba             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char big[], const char little[], size_t len)

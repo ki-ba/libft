@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:10:44 by kbarru            #+#    #+#             */
-/*   Updated: 2024/11/15 17:17:18 by kbarru           ###   ########lyon.fr   */
+/*   Updated: 2025/03/09 11:15:36 by kiba             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 static size_t	define_number_of_words(char const *s, char sep)
 {
@@ -88,32 +86,3 @@ char	**ft_split(char const *s, char c)
 	arr[i] = NULL;
 	return (arr);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	sep;
-	char	*s;
-	char	**arr;
-	size_t	i;
-	size_t	j;
-
-	sep = 'z';
-	s = "";
-	i = 0;
-	j = 0;
-	arr = ft_split(s, sep);
-	while (arr[i])
-	{
-		j = 0;
-		while (arr[i][j])
-		{
-			printf("%c", arr[i][j]);
-			++j;
-		}
-		printf("\n");
-		++i;
-	}
-} */

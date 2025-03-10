@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
+/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:06:45 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/09 11:17:07 by kiba             ###   ########lyon.fr   */
+/*   Updated: 2025/03/10 12:20:26 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,8 +105,8 @@ int					ft_is_in(const char c, const char *str);
 int					ft_put_ul_base(unsigned long nbr, char *base, int size);
 int					ft_putchar(char c);
 int					ft_putnbr_base(int nbr, char *base, int size);
-t_bool				str_is_alnum(char str[]);
-t_bool				str_is_non_empty(char str[]);
+t_bool				ft_str_is_alnum(char str[]);
+t_bool				ft_str_is_non_empty(char str[]);
 void				ft_print_arr(char **arr);
 void				ft_free_arr(char **arr);
 int					get_arr_length(char **arr);

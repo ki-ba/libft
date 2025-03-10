@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_random_str.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
+/*   By: kbarru <kbarru@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 11:05:42 by kiba              #+#    #+#             */
-/*   Updated: 2025/03/09 11:13:04 by kiba             ###   ########lyon.fr   */
+/*   Updated: 2025/03/10 12:21:05 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*create_random_str(size_t len)
 	urandom = open("/dev/urandom", O_RDONLY);
 	if (urandom < 0)
 		return (NULL);
-	while (!random_str[0] || !str_is_alnum(random_str)
+	while (!random_str[0] || !ft_str_is_alnum(random_str)
 		|| ft_strlen(random_str) != len)
 		read(urandom, random_str, len);
 	close(urandom);

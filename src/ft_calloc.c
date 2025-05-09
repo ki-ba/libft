@@ -6,7 +6,7 @@
 /*   By: kiba <kiba@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:52:27 by kbarru            #+#    #+#             */
-/*   Updated: 2025/03/09 11:14:12 by kiba             ###   ########lyon.fr   */
+/*   Updated: 2025/04/18 15:32:20 by kbarru           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb != 0 && size > __SIZE_MAX__ / nmemb)
 		return (0);
 	ptr = malloc(nmemb * size);
-	if (!ptr)
-		return (0);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

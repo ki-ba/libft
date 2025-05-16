@@ -22,11 +22,6 @@ static int	ft_issign(char c)
 	return (c == '-' || c == '+');
 }
 
-static int	ft_iswhitespace(char c)
-{
-	return (c == 32 || (c >= 9 && c <= 13));
-}
-
 int	ft_atoi(const char *nptr)
 {
 	int		sign;

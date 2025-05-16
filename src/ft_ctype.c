@@ -31,3 +31,8 @@ int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
+
+int	ft_iswhitespace(int c)
+{
+	return ((c >= 9 && c <= 13) || c == 32);
+}

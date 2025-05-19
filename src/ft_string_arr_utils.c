@@ -23,7 +23,7 @@ void	ft_free_arr(char **arr)
 	i = -1;
 	if (!arr)
 		return ;
-	while (arr[++i])
+	while (arr && arr[++i])
 		free(arr[i]);
 	free(arr);
 }
@@ -37,7 +37,7 @@ int	get_arr_length(char **arr)
 	int	i;
 
 	i = 0;
-	while (arr[i])
+	while (arr && arr[i])
 		++i;
 	return (i);
 }
@@ -53,6 +53,8 @@ char	**duplicate_arr(char **arr)
 	char	**dup;
 
 	i = -1;
+	if (!arr)
+		return ;
 	size = get_arr_length(arr);
 	dup = malloc(sizeof(char *) * (size + 1));
 	while (++i < size)
@@ -71,6 +73,6 @@ void	str_arr_suffix(char **arr, char *suffix)
 	int	i;
 
 	i = -1;
-	while (arr[++i])
+	while (arr && arr[++i] && suffix)
 		heap_add_suffix(suffix, &(arr[i]));
 }

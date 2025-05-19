@@ -54,7 +54,7 @@ char	**duplicate_arr(char **arr)
 
 	i = -1;
 	if (!arr)
-		return ;
+		return (NULL);
 	size = get_arr_length(arr);
 	dup = malloc(sizeof(char *) * (size + 1));
 	while (++i < size)

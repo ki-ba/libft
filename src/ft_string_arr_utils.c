@@ -24,7 +24,10 @@ void	ft_free_arr(char **arr)
 	if (!arr)
 		return ;
 	while (arr && arr[++i])
+	{
 		free(arr[i]);
+		arr[i] = NULL;
+	}
 	free(arr);
 }
 

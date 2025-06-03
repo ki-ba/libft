@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdarg.h>
 
 /*
 *	@brief frees `n_simple` variables and `n_arr` arrays of strings.
@@ -27,6 +28,7 @@ void	ft_multifree(int n_simple, int n_arr, ...)
 	char	*current_var;
 	char	**current_array;
 
+	va_start(args, n_arr);
 	i = 0;
 	while (i < n_simple)
 	{
@@ -38,4 +40,5 @@ void	ft_multifree(int n_simple, int n_arr, ...)
 		current_array = va_arg(args, char **);
 		ft_free_arr(current_array);
 	}
+	va_end(args);
 }

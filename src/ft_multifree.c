@@ -34,11 +34,13 @@ void	ft_multifree(int n_simple, int n_arr, ...)
 	{
 		current_var = va_arg(args, char *);
 		free(current_var);
+		++i;
 	}
 	while (i < n_arr - n_simple)
 	{
 		current_array = va_arg(args, char **);
 		ft_free_arr(current_array);
+		++i;
 	}
 	va_end(args);
 }

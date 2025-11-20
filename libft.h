@@ -122,7 +122,7 @@ char				*create_random_str(size_t len);
 
 /* get_next_line.c */
 char				*join_to_line(char *line[], char buffer[]);
-char				*get_next_line(int fd);
+char				*get_next_line(int fd, int *status);
 
 /* get_next_line_utils.c */
 char				*ft_strchr(const char *s, int c);
